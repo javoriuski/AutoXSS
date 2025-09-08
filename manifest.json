@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "AutoXSS",
+  "version": "1.0",
+  "description": "Plant your BXSS payload across every input on the page in one click.",
+  "action": {
+    "default_title": "AutoXSS",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "contextMenus"
+  ],
+  "background": {
+    "service_worker": "worker.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "commands": {
+    "fill-page": {
+      "suggested_key": { "default": "Alt+X" },
+      "description": "Fill page with your stored xss payload."
+    }
+  }
+}
